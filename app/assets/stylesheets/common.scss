@@ -1,0 +1,319 @@
+body {
+  color: azure;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: black;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  color: white;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+.header-logo a{
+  color: white;
+  font-size: 22px;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  color: white;
+  padding-left: 15px;
+}
+
+.header-menus a {
+  float: left;
+  font-size: 13px;
+  color: white;
+}
+
+.header-menus .fa {
+  padding-right: 5px;
+}
+
+.header-menus input[type="submit"] {
+  padding: 0 20px;
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}
+
+/* top ================================ */
+.top-main {
+  padding: 200px 0 100px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  color: white;
+  background-color: #3ecdc6;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-2591.jpg");
+}
+
+.top-message {
+  position: relative;
+}
+
+.top-main h2 {
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 20px;
+}
+
+.top-main p {
+  font-size: 24px;
+}
+// 共通の表
+table th {
+  background-color: #333333	;
+  padding: 10px 20px;
+}
+
+table td {
+  background-color: #000055;
+  padding: 10px 20px;
+}
+
+.notice {
+  background-color: #ccf;
+  padding: 5px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+// indexページ
+.index-rooms {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-2601.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.index-rooms h3 {
+  text-align: center;
+}
+
+.index-rooms p {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.index-rooms a  {
+  color: azure;
+}
+
+
+// showページ
+.show-room {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-2602.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.show-room h3 {
+  text-align: center;
+}
+
+.show-room li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.show-room a  {
+  color: azure;
+}
+
+// editページ
+.edit-room {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-1252.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.edit-room h3 {
+  text-align: center;
+}
+
+.edit-room li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.edit-room a  {
+  color: azure;
+}
+
+// newページ
+.new-room {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-1857.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.new-room h3 {
+  text-align: center;
+}
+
+.new-room li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.new-room a  {
+  color: azure;
+}
+
+// index-usersページ
+.index-users {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-2601.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.index-users h3 {
+  text-align: center;
+}
+
+.index-users p {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.index-users a  {
+  color: azure;
+}
+
+// show-userページ
+.show-user {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-2602.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.show-user h3 {
+  text-align: center;
+}
+
+.show-user li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.show-user a  {
+  color: azure;
+}
+
+// edit-userページ
+.edit-user {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-1252.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.edit-user h3 {
+  text-align: center;
+}
+
+.edit-user li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.edit-user a  {
+  color: azure;
+}
+
+// new-userページ
+.new-user {
+  padding-top: 60px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-1857.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.new-user h3 {
+  text-align: center;
+}
+
+.new-user li {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.new-user a  {
+  color: azure;
+}
+
+// ログインページ
+.login  {
+  color: #000055;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 300px;
+  background-image: url("https://www.photock.jp/photo/big/photo0000-1857.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  color: azure;
+}
+
+
+
+
+

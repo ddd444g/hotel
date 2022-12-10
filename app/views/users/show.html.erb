@@ -1,0 +1,63 @@
+<div class="show-user">
+
+  <h3>ユーザー詳細</h3>
+
+  <table>
+    <tr>
+      <th>名前</th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th>自己紹介</th>
+      <td><%= @user.profile %></td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><%= @user.email %></td>
+    </tr>
+
+    <tr>
+      <th>アイコン</th>
+      <td><%= @user.icon %></td>
+    </tr>
+  </table>
+
+<h3>お部屋投稿</h3>
+
+<%= form_with model: @room do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :name, "名前" %></th>
+      <td><%= f.text_area :name %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :introduction, "紹介文" %></th>
+      <td><%= f.text_area :introduction %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :address, "住所" %></th>
+      <td><%= f.text_area :address %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :price, "価格" %></th>
+      <td><%= f.text_area :price %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :img ,"画像" %></th>
+      <td><%= f.file_field :img %></td>
+    </tr>
+  </table>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <div>
+    <ul>
+      <li><%= f.submit "投稿を完了する"%></li>
+    </ul>
+  </div>
+<% end %>
+
+<div>
+  <ul>
+    <li><%= link_to "ユーザー情報一覧に戻る", :users %></li>
+  </ul>
+</div>
+ 
