@@ -16,8 +16,6 @@
           <th>価格</th>
           <th>作成日</th>
           <th>詳細</th>
-          <th>編集</th>
-          <th>削除</th>
         </tr>
       </thead>
 
@@ -31,13 +29,7 @@
             <td><%= room.price %></td>
             <td><%= room.created_at.to_s(:datetime_jp) %></td>
             <td>
-            <%= link_to "詳細", room %>
-          </td>
-          <td>
-              <%= link_to "編集", [:edit, room] %>
-            </td>
-            <td>
-              <%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+              <%= link_to "詳細", room %>
             </td>
           </tr>
         <% end %>

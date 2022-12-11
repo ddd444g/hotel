@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 # url直打ちでのアクセス制限
   def authenticate_user
-    if @current_user == nil
+    if @current_user == nil 
       flash[:notice] = "ログインが必要です"
       redirect_to("/login")
     end

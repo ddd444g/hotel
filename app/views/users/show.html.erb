@@ -2,7 +2,7 @@
 
   <h3>ユーザー詳細</h3>
 
-  <table>
+<table>
     <tr>
       <th>名前</th>
       <td><%= @user.name %></td>
@@ -20,7 +20,50 @@
       <th>アイコン</th>
       <td><%= @user.icon %></td>
     </tr>
+
   </table>
+
+<h3>投稿一覧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>名前</th>
+      <th>紹介文</th>
+      <th>住所</th>
+      <th>価格</th>
+      <th>作成日</th>
+      <th>投稿者(User_id)</th>
+      <th>詳細</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.img %></td>
+        <td><%= room.name %></td>
+        <td><%= room.introduction %></td>
+        <td><%= room.address %></td>
+        <td><%= room.price %></td>
+        <td><%= room.created_at.to_s(:datetime_jp) %></td>
+        <td><%= room.user_id %></td>
+        <td>
+          <%= link_to "詳細", room %>
+        </td>
+        <td>
+          <%= link_to "編集", [:edit, room] %>
+        </td>
+        <td>
+          <%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <h3>お部屋投稿</h3>
 

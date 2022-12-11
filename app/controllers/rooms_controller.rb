@@ -2,6 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user, {only: [:edit, :update, :new, :destroy]}
   def index
     @rooms = Room.all
+    @user = User.find_by(id: session[:user_id])
   end
 
   def new
@@ -22,10 +23,12 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @user = User.find_by(id: session[:user_id])
   end
 
   def edit
     @room = Room.find(params[:id])
+    @user = User.find_by(id: session[:user_id])
   end
 
   def update

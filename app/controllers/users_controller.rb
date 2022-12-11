@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @rooms = Room.all
+    @user = User.find_by(id: session[:user_id])
   end
 
   def new
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @room = Room.new
+    @rooms = @user.rooms
   end
 
   def edit
