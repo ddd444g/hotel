@@ -23,7 +23,7 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><img src="<%="/user_images/#{user.icon}" %>" ></td>
+          <td><img src="<%= user.icon.thumb.url %>"></td>
           <td><%= user.name %></td>
           <td><%= user.profile %></td>
           <td><%= user.email %></td>
@@ -59,7 +59,7 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.img %></td>
+        <td><img src="<%= room.img.thumb.url %>"></td>  
         <td><%= room.name %></td>
         <td><%= room.introduction %></td>
         <td><%= room.price %></td>

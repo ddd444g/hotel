@@ -18,7 +18,7 @@
 
     <tr>
       <th>アイコン</th>
-      <td><%= @user.icon %></td>
+      <td><img src="<%= @user.icon.thumb.url %>"></td>
     </tr>
 
   </table>
@@ -44,7 +44,7 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.img %></td>
+        <td><img src="<%= room.img.thumb.url %>"></td>
         <td><%= room.name %></td>
         <td><%= room.introduction %></td>
         <td><%= room.address %></td>

@@ -18,6 +18,9 @@
           <% if @current_user %>
             <li>
               <%= link_to("編集", "/users/#{@user.id}/edit") %>
+            </li>
+            <li class="icon">
+              <img src="<%= @current_user.icon.thumb.url %>">
             </li>  
             <li>
               <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
@@ -35,7 +38,8 @@
             <%= link_to("ログイン", "/login") %>
             </li>  
           <% end %>
-            <li><%= link_to("お部屋一覧","/rooms")%></li>
+            <li><%= link_to("お部屋一覧","/rooms")%>
+            </li>
         </ul>
     </header>
     <%= yield %>
