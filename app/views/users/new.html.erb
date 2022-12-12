@@ -2,6 +2,11 @@
 
   <h3>ユーザー新規作成</h3>
 
+  <%# エラーメッセージ %>
+  <div class="error-message">
+    <%= render "shared/error", obj: @user %> 
+  </div>
+
   <%= form_with model: @user do |f| %>
     <table>
       <tr>
@@ -25,7 +30,7 @@
       </tr>
 
       <tr>
-        <th><%= f.label :icon ,"画像" %></th>
+        <th><%= f.label :icon ,"アイコン" %></th>
         <td><%= f.file_field :icon %></td>
       </tr>
     </table>

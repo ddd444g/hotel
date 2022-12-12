@@ -4,6 +4,11 @@
 
     <h3>お部屋新規作成</h3>
 
+    <%# エラーメッセージ %>
+    <div class="error-message">
+      <%= render "shared/error", obj: @room %> 
+    </div> 
+
     <%= form_with model: @room do |f| %>
       <table>
         <tr>

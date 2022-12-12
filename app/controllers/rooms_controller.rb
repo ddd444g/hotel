@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
        redirect_to :rooms
      else
       @user = User.find_by(id: session[:user_id])
-      render "users/show"
+      render "rooms/new"
      end
   end
 
@@ -33,10 +33,11 @@ class RoomsController < ApplicationController
 
   def update
     @room = Room.find(params[:id])
-    if @room.update(params.require(:room).permit(:name, :introduction, :address, :price, :img))
+    if @room.update(params.require(:room).permit(:name, :introduction, :address, :price, :img,:user_id))
       flash[:notice] = "お部屋の情報を更新しました"
       redirect_to :rooms
     else
+      @user = User.find_by(id: session[:user_id])
       render "edit"
     end
   end

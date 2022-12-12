@@ -64,7 +64,6 @@ class UsersController < ApplicationController
       flash[:notice] = "ログインしました"
       redirect_to("/rooms")
     else
-      # @error_messageを定義してください
       @error_message = "メールアドレスまたはパスワードが間違っています"
       @email = params[:email]
       @password = params[:password]

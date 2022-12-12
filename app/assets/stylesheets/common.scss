@@ -127,7 +127,7 @@ table {
   text-align: center;
 }
 
-.index-rooms p {
+.index-rooms-footer {
   text-align: center;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -135,6 +135,10 @@ table {
 
 .index-rooms a  {
   color: azure;
+}
+
+.index-rooms p {
+  text-align: center;
 }
 
 
@@ -174,7 +178,7 @@ table {
   text-align: center;
 }
 
-.edit-room li {
+.edit-room li  {
   padding-top: 120px;
   padding-bottom: 120px;
   text-align: center;
@@ -320,7 +324,15 @@ table {
   border-radius: 120px;
 }
 
+// エラーメッセージ用
+.error-message li {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
 
-
-
-
+.notice {
+  color: #000055;
+  background-color: honeydew;
+  padding: 10px;
+}
