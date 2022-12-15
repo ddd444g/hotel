@@ -64,10 +64,63 @@
         <td><%= room.introduction %></td>
         <td><%= room.price %></td>
         <td><%= room.user_id %></td>
+        <td>
+           <%= link_to "編集", [:edit, room] %>
+         </td>
+         <td>
+           <%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-  <p><%= link_to "ユーザー新規登録", :new_user %></p>
+<h3>予約一覧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>名前</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>人数</th>
+      <th>合計金額</th>
+      <th>予約部屋(Room_id)</th>
+      <th>投稿者(User_id)</th>
+      <th>参照</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><img src="<%= room.img.thumb.url %>"></td>  
+        <td><%= room.name %></td>
+    <% end %> 
+    <% @bookings.each do |booking| %>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.total_people %></td>
+        <%# 合計金額はまだです。 %>
+        <td>< 未実装 ></td>
+        <td><%= booking.room_id %></td>
+        <td><%= booking.user_id %></td>
+        <td>
+           <%= link_to "参照", booking %>
+         </td>
+         <td>
+           <%= link_to "編集", [:edit, booking] %>
+         </td>
+         <td>
+           <%= link_to "削除", booking, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+         </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "ユーザー新規登録", :new_user %></p>
 </div>  

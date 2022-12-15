@@ -2,5 +2,14 @@
   <div class="top-message">
     <h2>旅行に行こう</h2>
     <p>お部屋を予約しよう</p>
+
+    <%# 検索機能 %>
+    <div class="search-form">
+      <h3>エリア検索</h3>
+        <%= form_tag({controller:"home",action:"top"}, method: :get) do %>
+          <%= text_field_tag :search %>
+          <%= submit_tag '検索する' %>
+        <% end %>
+    </div>  
   </div>  
 </div>

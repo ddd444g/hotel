@@ -65,6 +65,33 @@
   </tbody>
 </table>
 
+<h3>予約一覧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>名前</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>人数</th>
+      <th>合計金額</th>
+    </tr>
+  </thead>
+
+  <tbody> 
+    <% @bookings.each do |booking| %>
+        <td><></td>
+        <td><></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.total_people %></td>
+        <td><></td>
+      </tr>  
+    <% end %>
+  </tbody>
+</table>
+
 <h3>お部屋投稿</h3>
 
 <%= form_with model: @room do |f| %>

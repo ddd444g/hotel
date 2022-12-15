@@ -18,4 +18,6 @@ class ApplicationController < ActionController::Base
       redirect_to("/rooms/index")
     end
   end
+  # 検索機能
+  
 end
